@@ -726,12 +726,15 @@ body {
 .cs-main-menu button {
   display: block;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 20px;
   line-height: normal;
   color: var(--text);
   background: none;
   border: none;
-  padding: 2px 5px;
+  padding: 8px 10px;
+  text-shadow: 1px 1px 0px #000;
+  transition: padding-left 0.1s ease;
+  position: relative;
   text-decoration: none;
   cursor: pointer;
   text-align: left;
@@ -739,6 +742,15 @@ body {
 
 .cs-main-menu a:hover,
 .cs-main-menu button:hover {
+  color: var(--accent);
+  padding-left: 20px;
+}
+
+.cs-main-menu a:hover::before,
+.cs-main-menu button:hover::before {
+  content: ">";
+  position: absolute;
+  left: 0;
   color: var(--accent);
 }
 
@@ -851,4 +863,75 @@ body {
   font-size: 14px;
   border: 1px solid;
   border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+}
+
+/* Player HUD Footer */
+.cs-hud-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg);
+  border-top: 1px solid var(--border-light);
+  padding: 8px 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  font-size: 16px;
+  color: var(--accent);
+  z-index: 100;
+  user-select: none;
+}
+
+.cs-hud-item span {
+  color: var(--text);
+  margin-right: 5px;
+}
+
+@media (max-width: 900px) {
+  .cs-hud-footer {
+    font-size: 14px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Console Log Component for Experience */
+.cs-console {
+  background-color: #3e4637;
+  border: 2px inset var(--border-dark);
+  /* Inset creates the sunken terminal look */
+  font-family: 'Courier New', Courier, monospace;
+  padding: 15px;
+  height: 250px;
+  overflow-y: auto;
+  color: #dedfd6;
+  font-size: 14px;
+}
+
+.cs-console .log-time {
+  color: var(--text-3);
+  margin-right: 10px;
+}
+
+.cs-console .log-cmd {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.cs-console .log-output {
+  margin-left: 20px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Blinking cursor animation */
+.blinking-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
