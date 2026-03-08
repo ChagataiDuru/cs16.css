@@ -655,3 +655,120 @@ body {
     position: relative;
   }
 }
+
+/* Table */
+.cs-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text);
+  user-select: none;
+}
+.cs-table th {
+  background-color: var(--bg);
+  color: #fff;
+  padding: 4px 5px 3px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: left;
+  border: 1px solid;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+  cursor: pointer;
+}
+.cs-table th:active {
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+}
+.cs-table td {
+  padding: 4px 5px;
+  font-size: 16px;
+  line-height: 15px;
+  background-color: var(--secondary-bg);
+}
+.cs-table tr:hover td {
+  background-color: var(--secondary-accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Window */
+.cs-window {
+  background-color: var(--bg);
+  color: var(--text);
+  border: 1px solid;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+  padding: 4px;
+}
+.cs-window .heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3px;
+  padding-left: 2px;
+  font-size: 16px;
+  line-height: 15px;
+  color: white;
+  user-select: none;
+}
+.cs-window .content {
+  padding: 10px;
+}
+
+/* Inset */
+.cs-inset {
+  background-color: var(--secondary-bg);
+  border: 1px solid;
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+}
+
+/* Main Menu */
+.cs-main-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+.cs-main-menu li {
+  margin-bottom: 5px;
+}
+.cs-main-menu a, .cs-main-menu button {
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: normal;
+  color: var(--text);
+  background: none;
+  border: none;
+  padding: 2px 5px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: left;
+}
+.cs-main-menu a:hover, .cs-main-menu button:hover {
+  color: var(--accent);
+}
+
+/* Responsive Grid Wrapper */
+.cs-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000;
+}
+.cs-screen {
+  width: 100%;
+  max-width: 1024px;
+  aspect-ratio: 4 / 3;
+  background-color: var(--bg);
+  position: relative;
+  overflow-x: hidden;
+  border: 1px solid var(--border-dark);
+}
+
+@media (max-width: 1024px) {
+  .cs-screen {
+    aspect-ratio: auto;
+    min-height: 100vh;
+    border: none;
+  }
+}
