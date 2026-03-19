@@ -6,8 +6,6 @@
 
 This repository has been **heavily expanded and transformed** into a complete **Portfolio UI Kit**. It ditches the old-school layout limitations in favor of modern CSS Grid architectures, interactive hover states, and premium components, making it perfect for developers who want a responsive, highly functional portfolio wrapped in a nostalgic aesthetic.
 
-![Hero Showcase Screenshot](placeholder-for-showcase-screenshot.png)
-
 ## What's New?
 
 This is no longer a simple fork. The library has been upgraded with the following structural additions:
@@ -18,8 +16,6 @@ This is no longer a simple fork. The library has been upgraded with the followin
 * **Player HUD (`.cs-hud-footer`)**: A fixed bottom flexbox bar displaying your player stats permanently across the screen.
 * **Enhanced Main Menu**: The `.cs-main-menu` now natively includes padding transitions and prepends a `>` character upon hover interactions using CSS pseudo-elements.
 * **`.cs-table`, `.cs-window`, and `.cs-inset`**: Completely styled structural blocks for listing data and placing map thumbnails or profile pictures.
-
-![Component Breakdown Screenshot](placeholder-for-components-screenshot.png)
 
 ## Installation
 
